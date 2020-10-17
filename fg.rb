@@ -7,19 +7,19 @@ class Fg < Formula
 
   if OS.mac?
     url "https://github.com/aegoroff/fg/releases/download/v0.2.1/fg_0.2.1_darwin_amd64.tar.gz"
-    sha256 "55bb875631435f991f5d86c06a4764ddc34bc1e8ba16fe87a6a6268a7b8aa091"
+    sha256 "c5620e3fa49830684acba9074f1b34755c313e3ab47bcec6d3fcceaad2aea29c"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/aegoroff/fg/releases/download/v0.2.1/fg_0.2.1_linux_amd64.tar.gz"
-      sha256 "d8de5186d2d1eb3cd884c46e9ccc44aa6ae6914a7318930087db391c51f1907c"
+      sha256 "98da7ea9457d0289e26010534b5444fe1ada3b5eea53bf1a4f6d0c41a53df203"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/aegoroff/fg/releases/download/v0.2.1/fg_0.2.1_linux_arm64.tar.gz"
-        sha256 "e7836d0c85de305f3a97f57e6e7e2e5d3355ab83de8dba11889f97ef5d0d55b6"
+        sha256 "11a995bdd20572cfd8366036fbd64bab8eee5a74d2da82b0495266b9bbe218e3"
       else
         url "https://github.com/aegoroff/fg/releases/download/v0.2.1/fg_0.2.1_linux_armv7.tar.gz"
-        sha256 "ab90ecf46977446bd05b9d1ff1899a25718d227e55b6e8a72261d7c0cf18b3df"
+        sha256 "9d54420dfea8b20b2ff5810f4ac7b004af626335eb4d92d5bcc8753edcc2a9c1"
       end
     end
   end
