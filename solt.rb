@@ -2,26 +2,25 @@
 class Solt < Formula
   desc "A small commandline app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects."
   homepage "https://github.com/aegoroff/solt"
-  version "0.11.1"
+  version "0.11.2"
+  license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/solt/releases/download/v0.11.1/solt_0.11.1_darwin_amd64.tar.gz"
-    sha256 "98b8e625465ef96863e22f4700789b24a00fe80a0f225c0e1c7e8f9db2ed5999"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solt/releases/download/v0.11.1/solt_0.11.1_linux_amd64.tar.gz"
-      sha256 "d159ac1267d9cd8329f59812d7584b7735543ad22a6bc1da8d077448f6de4067"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/aegoroff/solt/releases/download/v0.11.1/solt_0.11.1_linux_arm64.tar.gz"
-        sha256 "787e71c55b618a2431f019e3e8865e192333c6b74dbd405989b9ab8e018480f6"
-      else
-        url "https://github.com/aegoroff/solt/releases/download/v0.11.1/solt_0.11.1_linux_armv7.tar.gz"
-        sha256 "68fe2296da4d609e0605d28b4cfc4d5253c654505e7dbe3e5cc8226a99e7ddaa"
-      end
-    end
+    url "https://github.com/aegoroff/solt/releases/download/v0.11.2/solt_0.11.2_darwin_amd64.tar.gz"
+    sha256 "2710c6c49c355f7e55efe8069b103fe6c3519b8ee21e0581252b79bd99608a20"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/aegoroff/solt/releases/download/v0.11.2/solt_0.11.2_linux_amd64.tar.gz"
+    sha256 "8f664716d9ea1f06f5a4a4b692fdcf73573863ed34aee723a10b981ab40e13d2"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/aegoroff/solt/releases/download/v0.11.2/solt_0.11.2_linux_armv7.tar.gz"
+    sha256 "fceee44c6b11a7d6b14326e36c7a62a8ffa37058ef1597d8d7adc9f4a33dff37"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/aegoroff/solt/releases/download/v0.11.2/solt_0.11.2_linux_arm64.tar.gz"
+    sha256 "930dc8fbd1c7b11f655f6019d2055f3a10be43183e3a150487eb70c425702c5b"
   end
 
   def install
