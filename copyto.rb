@@ -2,26 +2,24 @@
 class Copyto < Formula
   desc "A small command line app written in Go that allows you to easily one way sync between folders"
   homepage "https://github.com/aegoroff/copyto"
-  version "1.1.1"
+  version "1.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.1.1/copyto_1.1.1_darwin_amd64.tar.gz"
-    sha256 "dd89c5916b88559eb951b043e286828cb355dc5138e07cd43c750609b3bd5065"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.1.1/copyto_1.1.1_linux_amd64.tar.gz"
-      sha256 "732dc404e4a73ee91120292b9301ca0931d3428e69979e636f20267dd7e83770"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/aegoroff/copyto/releases/download/v1.1.1/copyto_1.1.1_linux_arm64.tar.gz"
-        sha256 "7e392aa108dd4465151ae4103690c47ed701d26de74b38d22dedf0ff879e345e"
-      else
-        url "https://github.com/aegoroff/copyto/releases/download/v1.1.1/copyto_1.1.1_linux_armv7.tar.gz"
-        sha256 "ec1fd2d19fa7ce5e26cc8b1560e006d6c2d2f1c7606ab713f0d6f1efce33dfa7"
-      end
-    end
+    url "https://github.com/aegoroff/copyto/releases/download/v1.1.2/copyto_1.1.2_darwin_amd64.tar.gz"
+    sha256 "a5f05de1c585cf94d9830971f3851df2e633156e49a1261f92a95c3dc3407066"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/aegoroff/copyto/releases/download/v1.1.2/copyto_1.1.2_linux_amd64.tar.gz"
+    sha256 "43d87e8872e74c14257a465ac3a38406ddaeaddb8e20907128d67f17518f7eea"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/aegoroff/copyto/releases/download/v1.1.2/copyto_1.1.2_linux_armv7.tar.gz"
+    sha256 "9f2009b7725a2af549dddcdfef71187e20cd46bfb349c17385c2f0d378e6bc9c"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/aegoroff/copyto/releases/download/v1.1.2/copyto_1.1.2_linux_arm64.tar.gz"
+    sha256 "8133cd830b66b63b2cc00d7daaf47aae3081c46d1f1be729b6015c65c694c3a3"
   end
 
   def install
