@@ -2,26 +2,24 @@
 class Dirstat < Formula
   desc "A small tool that shows selected folder or drive (on Windows) usage statistic"
   homepage "https://github.com/aegoroff/dirstat"
-  version "0.10.7"
+  version "0.10.8"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.7/dirstat_0.10.7_darwin_amd64.tar.gz"
-    sha256 "9b330e7b8803281ecb5c2e1af08c30983ec01c4314ae30ecd8f704be3bd4fbf6"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/dirstat/releases/download/v0.10.7/dirstat_0.10.7_linux_amd64.tar.gz"
-      sha256 "9e0f7269a8700030ee477c9593c43a1be678eeb88061acbc0f39dc9081a5858f"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/aegoroff/dirstat/releases/download/v0.10.7/dirstat_0.10.7_linux_arm64.tar.gz"
-        sha256 "eaba9bbc3156079c09660153f90df64a3a28cfda96d170625584919e8e48e1b7"
-      else
-        url "https://github.com/aegoroff/dirstat/releases/download/v0.10.7/dirstat_0.10.7_linux_armv7.tar.gz"
-        sha256 "4541cc1b4c4f41d6e6641a514c4ae52fdba80dd9aa6d5df42d1340966a63bf16"
-      end
-    end
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.8/dirstat_0.10.8_darwin_amd64.tar.gz"
+    sha256 "3df0f87d630ab66ac2f9799f287bd68ae9de51638c7ec590ef1234e6679f1828"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.8/dirstat_0.10.8_linux_amd64.tar.gz"
+    sha256 "dcbb4681f62ff97b68054b09c4d5ee488b1af50de30c196c3639a5ddb16d802a"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.8/dirstat_0.10.8_linux_armv7.tar.gz"
+    sha256 "5af2e63d3e93cf9ef3abf95b765b9c1786e60b40b9542afb099b01bf037eff8c"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.8/dirstat_0.10.8_linux_arm64.tar.gz"
+    sha256 "efecdb0352aa71f41d75bea76c732892a5614ff10cf5047e7a047c6621838cdc"
   end
 
   def install
