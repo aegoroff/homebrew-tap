@@ -2,25 +2,25 @@
 class Dirstat < Formula
   desc "Small tool that shows selected folder or drive (on Windows) usage statistic"
   homepage "https://github.com/aegoroff/dirstat"
-  version "0.10.12"
+  version "0.10.13"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.12/dirstat_0.10.12_darwin_amd64.tar.gz"
-    sha256 "94fb1303f46b87f4e9f52e96b8ffcf5823aca4dfcd880191cec6d8bd0b44d91c"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.13/dirstat_0.10.13_darwin_amd64.tar.gz"
+    sha256 "69a761e7894e8d5feee571a7ac40de1b3fa343e07f7821d83670c44a3492d016"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.12/dirstat_0.10.12_linux_amd64.tar.gz"
-    sha256 "1e592b9a71bbc83b59a3c945d40b3c0a620d49e30eeba62a9af85341a9a08a78"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.13/dirstat_0.10.13_linux_amd64.tar.gz"
+    sha256 "4a2ddc5a83f2b57b2cec8baa44945eb1ded8000fc4a0915b25c68db297b9dcbb"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.12/dirstat_0.10.12_linux_armv7.tar.gz"
-    sha256 "beb3c9de0bb816468f4741340539a3424bcb20933da178b21ff0e3c5774abe9a"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.13/dirstat_0.10.13_linux_armv7.tar.gz"
+    sha256 "3a5a0a712d95306c9c465992f51c402d04062901bc86fe32abf9ccb1998ad4f9"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.12/dirstat_0.10.12_linux_arm64.tar.gz"
-    sha256 "4298de5517d2390d71cecaff0aaa8674ee40e0c6458640c420c87345ca6f811e"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.13/dirstat_0.10.13_linux_arm64.tar.gz"
+    sha256 "6fea9d906fa4c46cc9a8e1e1cfea62ce66976bf2656c55139720cc1cfc1c13ec"
   end
 
   def install
@@ -28,6 +28,6 @@ class Dirstat < Formula
   end
 
   test do
-    system "#{bin}/dirstat -h"
+    system "#{bin}/dirstat"
   end
 end
