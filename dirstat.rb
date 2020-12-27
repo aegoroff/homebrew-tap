@@ -2,25 +2,25 @@
 class Dirstat < Formula
   desc "Small tool that shows selected folder or drive (on Windows) usage statistic"
   homepage "https://github.com/aegoroff/dirstat"
-  version "0.10.16"
+  version "0.10.17"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.16/dirstat_0.10.16_darwin_amd64.tar.gz"
-    sha256 "e69adb1a7318fd916a27ba829f88b7b9fae70a8b337ee5826193d2e10866c4b4"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.17/dirstat_0.10.17_darwin_amd64.tar.gz"
+    sha256 "4c1f06935f7bc78ec00ecc035cfc4c85bdf7d3e4a0306d01792b68fee0c9db12"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.16/dirstat_0.10.16_linux_amd64.tar.gz"
-    sha256 "c893f31daddb6452d37bc573f9eeeec982d6001ddff94da84246a7e5ef5bcf81"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.17/dirstat_0.10.17_linux_amd64.tar.gz"
+    sha256 "11f6d887749c387bde14fd78698a645e392356c6803326c00041759dabce7fb9"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.16/dirstat_0.10.16_linux_armv7.tar.gz"
-    sha256 "ace070c117ac2be0a8dd70fbc6c33eb5fff7555fa034be9c3204d9a442ec7bd9"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.17/dirstat_0.10.17_linux_armv7.tar.gz"
+    sha256 "b1ccf4f30002e3908a74b7c8680009019eb9efdc60ec8587f1a7d6d29f49cf5d"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.16/dirstat_0.10.16_linux_arm64.tar.gz"
-    sha256 "3d1bd543a4e67d26f2e9af46e5e6e6a29e4886fd8080fb8dabf296e5621b9eb7"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.17/dirstat_0.10.17_linux_arm64.tar.gz"
+    sha256 "783e1cad569df044b978efabde95f15f690c1a14e381e0f7646f939d52c7ba68"
   end
 
   def install
@@ -28,6 +28,6 @@ class Dirstat < Formula
   end
 
   test do
-    system "#{bin}/dirstat"
+    assert_match version.to_s, shell_output("#{bin}/dirstat ver")
   end
 end
