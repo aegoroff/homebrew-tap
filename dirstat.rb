@@ -2,27 +2,32 @@
 class Dirstat < Formula
   desc "Small tool that shows selected folder or drive (on Windows) usage statistic"
   homepage "https://github.com/aegoroff/dirstat"
-  version "0.10.10"
+  version "0.10.11"
+  license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.10/dirstat_0.10.10_darwin_amd64.tar.gz"
-    sha256 "74f51b3ec0287ed63a06f550e744035f2c29e8957eb8b11bbafdd1507ce6a85b"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.11/dirstat_0.10.11_darwin_amd64.tar.gz"
+    sha256 "40889a61aa812802f2a94c7cf0eb7e8723ab6ee845a051b80c2ee941f109e6ff"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.10/dirstat_0.10.10_linux_amd64.tar.gz"
-    sha256 "7e1c68f9ac6d80ec691bd4a71dce3f06d02f446ffb70f4f3ee4c24a2afdf060d"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.11/dirstat_0.10.11_linux_amd64.tar.gz"
+    sha256 "c4ba627ae8f9d9f933682d270997635ab0d719f1cd2c4ac17f3aed9068e92763"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.10/dirstat_0.10.10_linux_armv7.tar.gz"
-    sha256 "ab9ecbe221a804ed1d7dba79bc86a1f089bf53e2e97f7a9df4d0215bed9dd8f0"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.11/dirstat_0.10.11_linux_armv7.tar.gz"
+    sha256 "a75f8c2b27bce5e3ee31272dbb088b5017821903f2dd0f5c2a1bfafdccd65258"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.10/dirstat_0.10.10_linux_arm64.tar.gz"
-    sha256 "e8a4b9662aff06a79d5ef14e3a1f88b4b97699e53a3fb4118a7c864cc074b3ee"
+    url "https://github.com/aegoroff/dirstat/releases/download/v0.10.11/dirstat_0.10.11_linux_arm64.tar.gz"
+    sha256 "91bf17cb23771f215b75133627562d8df829d2363d570579fc04e4c47e731137"
   end
 
   def install
     bin.install "dirstat"
+  end
+
+  test do
+    system "#{bin}/dirstat ver"
   end
 end
