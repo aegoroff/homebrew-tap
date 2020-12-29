@@ -2,25 +2,25 @@
 class Solt < Formula
   desc "Small console app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects"
   homepage "https://github.com/aegoroff/solt"
-  version "0.11.4"
+  version "0.12"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/solt/releases/download/v0.11.4/solt_0.11.4_darwin_amd64.tar.gz"
-    sha256 "b8e0bceddae82dc4a1a67eafde8652c2e9a44e0b597a0c46850a1a1c127aeee1"
+    url "https://github.com/aegoroff/solt/releases/download/v0.12/solt_0.12_darwin_amd64.tar.gz"
+    sha256 "cf409094d87049cf3839a55e7237ca55f4302c811094aba574ab412ab43afbe3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/solt/releases/download/v0.11.4/solt_0.11.4_linux_amd64.tar.gz"
-    sha256 "5094ad14263874a33d9e7bcc1237dc1eb1abb4cbc1b75e33b68f445fd1844561"
+    url "https://github.com/aegoroff/solt/releases/download/v0.12/solt_0.12_linux_amd64.tar.gz"
+    sha256 "17e2f0a67c7fe17df660f82e2ac077f59450a9f84bbbacfa229d0b0e7d6a4ada"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/solt/releases/download/v0.11.4/solt_0.11.4_linux_armv7.tar.gz"
-    sha256 "f13f15ae4da11c9006e52fe52a10ba6302b28d4ac55dde0a75a552e116fa74f5"
+    url "https://github.com/aegoroff/solt/releases/download/v0.12/solt_0.12_linux_armv7.tar.gz"
+    sha256 "2afdfbb124da14212b29637315f3e6a5cd0968e45b62d70e57a2d3094e5a7cb5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/solt/releases/download/v0.11.4/solt_0.11.4_linux_arm64.tar.gz"
-    sha256 "b1b2f8fd4f5f76146edeefb42f9e5c99fe205bb3db1f3ced422a3ce80d7c2e0d"
+    url "https://github.com/aegoroff/solt/releases/download/v0.12/solt_0.12_linux_arm64.tar.gz"
+    sha256 "5c6fecd5b02cc31a7f83e620ce5c02f0f643ac0f12213667cc4fcdb31dc42328"
   end
 
   def install
@@ -28,6 +28,6 @@ class Solt < Formula
   end
 
   test do
-    system "#{bin}/solt ver"
+    assert_match version.to_s, shell_output("#{bin}/solt ver")
   end
 end
