@@ -2,25 +2,25 @@
 class Fg < Formula
   desc "Small console app written in Go that allows you to easily group all files in the dir specified"
   homepage "https://github.com/aegoroff/fg"
-  version "0.2.2"
+  version "0.2.3"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/fg/releases/download/v0.2.2/fg_0.2.2_darwin_amd64.tar.gz"
-    sha256 "cd49a3f9db6daefcdee4ab1aecfd5b50240c5e524830204d9ac426e246a283ca"
+    url "https://github.com/aegoroff/fg/releases/download/v0.2.3/fg_0.2.3_darwin_amd64.tar.gz"
+    sha256 "4ec37efe80e12c4a3ccb21f7be6ff903c9d99b7ed6b74023ec80c5f930d25696"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/fg/releases/download/v0.2.2/fg_0.2.2_linux_amd64.tar.gz"
-    sha256 "8e433c56089141bb6cec1ecc8c5b6ce52fae87eb871a116a8a3946910eea60f5"
+    url "https://github.com/aegoroff/fg/releases/download/v0.2.3/fg_0.2.3_linux_amd64.tar.gz"
+    sha256 "aed2d303677937e6967999f6e637301068577d4a164ec94caa9c1bdbae782035"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/fg/releases/download/v0.2.2/fg_0.2.2_linux_armv7.tar.gz"
-    sha256 "944db363559a4c8be112fcbbf89b47f406ff597ee49815f94405c485ef377da8"
+    url "https://github.com/aegoroff/fg/releases/download/v0.2.3/fg_0.2.3_linux_armv7.tar.gz"
+    sha256 "e8127f281cccc043fc5eebbbdac10874bf09c669ca83e327f82a7df3aaa8d561"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/fg/releases/download/v0.2.2/fg_0.2.2_linux_arm64.tar.gz"
-    sha256 "9685ff56f3a0f77a54b0abeae4ca99c02e3dbce54de7514c0fa0a24a175a97dc"
+    url "https://github.com/aegoroff/fg/releases/download/v0.2.3/fg_0.2.3_linux_arm64.tar.gz"
+    sha256 "2530a60807ad4ffa721dcdcafe1e48d55f620aef5b26494e2b93994a9904ecb2"
   end
 
   def install
