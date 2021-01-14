@@ -2,25 +2,25 @@
 class Dirstat < Formula
   desc "Small tool that shows selected folder or drive (on Windows) usage statistic"
   homepage "https://github.com/aegoroff/dirstat"
-  version "0.14.0"
+  version "1.0.0"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.14.0/dirstat_0.14.0_darwin_amd64.tar.gz"
-    sha256 "4980ddec8c121fa7cf7f4ca7554eab7c10ec65905815dacf77116016525c2d75"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.0/dirstat_1.0.0_darwin_amd64.tar.gz"
+    sha256 "31e3fa0cc7d1dd3a96c388ed0dbafdab8ccdbfdc7fcfbb93672a84cdc8f056a2"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.14.0/dirstat_0.14.0_linux_amd64.tar.gz"
-    sha256 "fb30e1b0d912c4e95e67000c3a865407907f5eb231d8a1a5caeab3342476aa15"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.0/dirstat_1.0.0_linux_amd64.tar.gz"
+    sha256 "4b90e3c7650f9f7691e2e7fde12231d25e4453f58bfe8989f01d67f71be6a916"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.14.0/dirstat_0.14.0_linux_armv7.tar.gz"
-    sha256 "b8c61f7751e2dd29e99713214ba9837f18ae294029fa34d50b6a426bb5a4b71a"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.0/dirstat_1.0.0_linux_armv7.tar.gz"
+    sha256 "136a270a5cbfd67dcfe97777ea835d3e2774e3bebf264cf364d7a72f95a25158"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v0.14.0/dirstat_0.14.0_linux_arm64.tar.gz"
-    sha256 "dec6da0f86de82e361efd2ebd801896704b8e95888be8c6fef5ed4de0515a006"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.0/dirstat_1.0.0_linux_arm64.tar.gz"
+    sha256 "36385aa155601bfefb74c5d817f20304bb19e363cbfffa1eccf49bd3999c539e"
   end
 
   def install
