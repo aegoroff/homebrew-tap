@@ -2,25 +2,25 @@
 class Solt < Formula
   desc "Small console app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects"
   homepage "https://github.com/aegoroff/solt"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/aegoroff/solt/releases/download/v1.0.1/solt_1.0.1_darwin_amd64.tar.gz"
-    sha256 "ca1c98f7319efd469c2bdec09df9cd9443df62c651e059284874c954479778d5"
+    url "https://github.com/aegoroff/solt/releases/download/v1.0.2/solt_1.0.2_darwin_amd64.tar.gz"
+    sha256 "464cf05db27e93ac5cdc4a2f678c339fa6ac9abe0d9cc6a09dadf9f40a92f527"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/solt/releases/download/v1.0.1/solt_1.0.1_linux_amd64.tar.gz"
-    sha256 "3bb7a42a644bece473be87595e8ca6476994af0ec1abd3400de371f7cb23aa31"
+    url "https://github.com/aegoroff/solt/releases/download/v1.0.2/solt_1.0.2_linux_amd64.tar.gz"
+    sha256 "0e01f8ca0e6882526c8c1b7230086154a3702fd94aad20e2b31fe375f814f035"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/solt/releases/download/v1.0.1/solt_1.0.1_linux_armv7.tar.gz"
-    sha256 "363a6f013613a0b6d6a85b608fa1b7c38d9c77225f7f75b2f983c09e486b199b"
+    url "https://github.com/aegoroff/solt/releases/download/v1.0.2/solt_1.0.2_linux_armv7.tar.gz"
+    sha256 "5f04dee59b23423f4e673507d069ba91575300000f951f33f4f2fb7891aa46b1"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/solt/releases/download/v1.0.1/solt_1.0.1_linux_arm64.tar.gz"
-    sha256 "840c1c463ea872b4d36395e7b4e1aa493d42fd6e452fb8204ba8766f24c2b1ac"
+    url "https://github.com/aegoroff/solt/releases/download/v1.0.2/solt_1.0.2_linux_arm64.tar.gz"
+    sha256 "1a2990f6b8624f8a1bfdb81e7567141e08166ca93c8866d999267805618b021f"
   end
 
   def install
