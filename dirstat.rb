@@ -5,29 +5,29 @@
 class Dirstat < Formula
   desc "Small tool that shows selected folder or drive (on Windows) usage statistic"
   homepage "https://github.com/aegoroff/dirstat"
-  version "1.0.3"
+  version "1.0.4"
   license "Apache-2.0"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.3/dirstat_1.0.3_darwin_amd64.tar.gz"
-    sha256 "c7f00dfdba6153b71b4fc0c6bba323af63710ac464f2412c4ba83db3ec9d6d3a"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.4/dirstat_1.0.4_darwin_amd64.tar.gz"
+    sha256 "436c0b8db6dd4cbaf2842de3ab3f68ac43a269050d78d1b3598d416add4a9a75"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.3/dirstat_1.0.3_darwin_arm64.tar.gz"
-    sha256 "a14f9701769d7a2ca7839059ae481a2adf70b420d5f8cbf2189dc6194ebdc760"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.4/dirstat_1.0.4_darwin_arm64.tar.gz"
+    sha256 "d1888da90ff3d307c78dae91dd9b8cf5fea427d345ab7ecec75ccfa6a056fe25"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.3/dirstat_1.0.3_linux_amd64.tar.gz"
-    sha256 "ff1fa50ba369dfa102ea4dc490821d7dde0d56d1d2f5ad8bec578516e3e3bab0"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.4/dirstat_1.0.4_linux_amd64.tar.gz"
+    sha256 "a242153de529dc86ab6872bbc1119a9f76d6570c8030ed3fb931edcfcf083b1f"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.3/dirstat_1.0.3_linux_armv7.tar.gz"
-    sha256 "1bd7f4f65039a1fde99d489aecb195afb7e7b0fd319ddcbd0202454b27422dda"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.4/dirstat_1.0.4_linux_armv7.tar.gz"
+    sha256 "da3af30bf52fbad24261f2231f2d4aff09dfffb229c19891414e2e964bfd3e85"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.3/dirstat_1.0.3_linux_arm64.tar.gz"
-    sha256 "1dbbb5e8db8393d6dfe1853b3d5ab6986aa887da4713488f65c8d7e3ae0b1509"
+    url "https://github.com/aegoroff/dirstat/releases/download/v1.0.4/dirstat_1.0.4_linux_arm64.tar.gz"
+    sha256 "6090862257911fee73e3f719c8d70eba3b613d872ff76ec10178c0011fff74cf"
   end
 
   def install
