@@ -5,25 +5,25 @@
 class Copyto < Formula
   desc "Small console app written in Go that allows you to easily one way sync between folders"
   homepage "https://github.com/aegoroff/copyto"
-  version "1.2.2"
+  version "1.2.3"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.2/copyto_1.2.2_darwin_amd64.tar.gz"
-    sha256 "607e75ed0e71032c834c4d74af155d884945dce65914041e035fdfc93f12d8d9"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_darwin_amd64.tar.gz"
+    sha256 "e34b91108f989b4458657f194792d8491253bd1727e9100cb031ee4dcce2b745"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.2/copyto_1.2.2_darwin_arm64.tar.gz"
-    sha256 "022f376330a7aaf916c481abfbf0f426ff3eec2ef220df29a3bcbe3080a79a1d"
+    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_darwin_arm64.tar.gz"
+    sha256 "54ce6264f3f50b4f63d9feb6f82e128aa6e69015ef9bc905c2ebe503e3055dc7"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.2/copyto_1.2.2_linux_amd64.tar.gz"
-    sha256 "bf209a6f578cfe6eb4765280aa770971852effeb7d65c9d6a6cd0fe3f2c93f52"
+    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_linux_amd64.tar.gz"
+    sha256 "4290ee3caf97e47f0d94ddab69a2fc9b43b4fa46f6e7f15c1b8bde3487545a03"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.2/copyto_1.2.2_linux_armv7.tar.gz"
-    sha256 "72e7c820c7e841599f15a9b0c60e42adeb468ca9d0bee8000f21e1911e70f139"
+    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_linux_armv7.tar.gz"
+    sha256 "ca454f7ee788c3c58ccb5a414b364ab14204ca22f2a1a2add0dcc68d41715cf0"
   end
 
   def install
