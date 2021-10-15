@@ -5,21 +5,30 @@
 class Solt < Formula
   desc "Small console app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects"
   homepage "https://github.com/aegoroff/solt"
-  version "1.0.6"
+  version "1.0.7"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/solt/releases/download/v1.0.6/solt_1.0.6_darwin_amd64.tar.gz"
-    sha256 "4b4354a31e2dcc5c97ff8aa3aaebb3dc99718a197ebe4459678d2553a5cae2a2"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.7/solt_1.0.7_darwin_amd64.tar.gz"
+      sha256 "9a6c8144ed77cd5e2b88031109ac4285ca08e8c644f3d022a389359470721a7b"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.7/solt_1.0.7_darwin_arm64.tar.gz"
+      sha256 "0ff033c83f523a7cb9ed77dbe225126b204dbb3064d29164ab82951ac8824bcd"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/solt/releases/download/v1.0.6/solt_1.0.6_linux_amd64.tar.gz"
-    sha256 "a59e1c723194663c23ccb883788551db863e1ee97aefdb683e1e7f2fd12e177e"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/solt/releases/download/v1.0.6/solt_1.0.6_linux_armv7.tar.gz"
-    sha256 "51665610b1432c65112de71793315d06b417da5737317984fb41e75367fce1bb"
+
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.7/solt_1.0.7_linux_armv7.tar.gz"
+      sha256 "411716993747228301c51d7b5f3b43c45d07b9fa0d948aae470fcd95145c06f0"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.7/solt_1.0.7_linux_amd64.tar.gz"
+      sha256 "fb5c2f5d41c7d3485898de9905736dc8c540a912dc95d3a55bd9360901689811"
+    end
   end
 
   def install
