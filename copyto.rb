@@ -5,25 +5,30 @@
 class Copyto < Formula
   desc "Small console app written in Go that allows you to easily one way sync between folders"
   homepage "https://github.com/aegoroff/copyto"
-  version "1.2.3"
+  version "1.2.4"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_darwin_amd64.tar.gz"
-    sha256 "e34b91108f989b4458657f194792d8491253bd1727e9100cb031ee4dcce2b745"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_darwin_amd64.tar.gz"
+      sha256 "96ec207a518a6db7d577db25cee66923b87996b02b91679e1d06d189d13091f8"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_darwin_arm64.tar.gz"
+      sha256 "e1159cd51c2a3e54a3941a56deb465769c1cb957a96abdb28ab5cbff87819261"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_darwin_arm64.tar.gz"
-    sha256 "54ce6264f3f50b4f63d9feb6f82e128aa6e69015ef9bc905c2ebe503e3055dc7"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_linux_amd64.tar.gz"
-    sha256 "4290ee3caf97e47f0d94ddab69a2fc9b43b4fa46f6e7f15c1b8bde3487545a03"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/aegoroff/copyto/releases/download/v1.2.3/copyto_1.2.3_linux_armv7.tar.gz"
-    sha256 "ca454f7ee788c3c58ccb5a414b364ab14204ca22f2a1a2add0dcc68d41715cf0"
+
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_linux_armv7.tar.gz"
+      sha256 "48b864883138f4a7bdb3b8d615ef8d040268433dd88bc2e05f2dc5fd09aa1f62"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_linux_amd64.tar.gz"
+      sha256 "e52dcbb58f9b1dc92445ae34f4c898a73df70605b6b851ba97a33e17a738b6f7"
+    end
   end
 
   def install
