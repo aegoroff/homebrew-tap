@@ -9,15 +9,15 @@ class Editorconfiger < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.6/editorconfiger-v0.1.6-x86_64-apple-darwin.tar.gz"
-      sha256 "35a7a405d83aff6976407a7294aba64b3c7ea80fc33c07bf23e7e1295204df0b"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.7/editorconfiger-v0.1.7-x86_64-apple-darwin.tar.gz"
+      sha256 "fe7aec4fa3b5606a70817dd1afd621451007d5476e9f6e6235b99b8d4826151d"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.6/editorconfiger-v0.1.6-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "908f02aa10ae894b7ae965e8841a2b3a8001c0bd31a5e43054a93fc010cdb129"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.7/editorconfiger-v0.1.7-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "14ac575adc000ea88de8ddfafcf5bf827cc8fd5e2da8bbfdc894b43e6eebbc7b"
     end
   end
 
