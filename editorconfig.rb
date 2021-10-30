@@ -4,7 +4,7 @@
 class Editorconfiger < Formula
   desc "Plain tool to validate and compare .editorconfig files"
   homepage "https://github.com/aegoroff/editorconfiger"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
   bottle :unneeded
 
