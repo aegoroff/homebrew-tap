@@ -5,34 +5,45 @@
 class Copyto < Formula
   desc "Small console app written in Go that allows you to easily one way sync between folders"
   homepage "https://github.com/aegoroff/copyto"
-  version "1.2.4"
+  version "1.2.5"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_darwin_amd64.tar.gz"
-      sha256 "96ec207a518a6db7d577db25cee66923b87996b02b91679e1d06d189d13091f8"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.5/copyto_1.2.5_darwin_amd64.tar.gz"
+      sha256 "881ce5f7ff7c674fc799144196e61d8ce02bb1ae42476dea26da7cec3fbc43b7"
+
+      def install
+        bin.install "copyto"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_darwin_arm64.tar.gz"
-      sha256 "e1159cd51c2a3e54a3941a56deb465769c1cb957a96abdb28ab5cbff87819261"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.5/copyto_1.2.5_darwin_arm64.tar.gz"
+      sha256 "a0aed8744576d468767e64b6ddbbbb5c5b7248358376b563559cf6daec3522eb"
+
+      def install
+        bin.install "copyto"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_linux_armv7.tar.gz"
-      sha256 "48b864883138f4a7bdb3b8d615ef8d040268433dd88bc2e05f2dc5fd09aa1f62"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.5/copyto_1.2.5_linux_armv7.tar.gz"
+      sha256 "e25e4a2529f5150b5e7b7f5f660a73f1d43d3ad55a86c62156a0b26353674cf1"
+
+      def install
+        bin.install "copyto"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.4/copyto_1.2.4_linux_amd64.tar.gz"
-      sha256 "e52dcbb58f9b1dc92445ae34f4c898a73df70605b6b851ba97a33e17a738b6f7"
-    end
-  end
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.5/copyto_1.2.5_linux_amd64.tar.gz"
+      sha256 "61d3907f136de40f0c88475f5ecc9a4724703460fb0f88b37f4f28163fbecf2e"
 
-  def install
-    bin.install "copyto"
+      def install
+        bin.install "copyto"
+      end
+    end
   end
 
   test do
