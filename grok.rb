@@ -22,7 +22,7 @@ class Grok < Formula
   end
 
   def install
-    libexec.install Dir["*"]
+    bin.install Dir["*"]
   end
 
 end
