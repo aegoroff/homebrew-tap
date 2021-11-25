@@ -4,25 +4,25 @@
 class Editorconfiger < Formula
   desc "Plain tool to validate and compare .editorconfig files"
   homepage "https://github.com/aegoroff/editorconfiger"
-  version "0.1.7"
+  version "0.1.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.7/editorconfiger-v0.1.7-x86_64-apple-darwin.tar.gz"
-      sha256 "c131817bd2ec4711a6190763ace5163bef5dd84d03c013187cec5516cc2c7d36"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.9/editorconfiger-v0.1.9-x86_64-apple-darwin.tar.gz"
+      sha256 "e99900eb61174fe2630560d8383bcdd11dc582d5a1b3241397ec13ca9c9cfd56"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.7/editorconfiger-v0.1.7-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "15b7d904662ddd8422dc2d6559e2554e1fcd7d01cdd7862c36a48d7c2d9b5cf8"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/v0.1.9/editorconfiger-v0.1.9-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "b533e9e0eee80649c8227094d661aea645257f9de58b6a552ade550c5bb21bc7"
     end
   end
 
   def install
-    bin.install "editorconfiger"
+    bin.install Dir["*"]
   end
 
 end
