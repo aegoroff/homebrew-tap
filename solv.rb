@@ -4,25 +4,25 @@
 class Solv < Formula
   desc "Microsoft Visual Studio solution validator"
   homepage "https://github.com/aegoroff/solv"
-  version "0.3.8"
+  version "0.3.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/v0.3.8/solv-v0.3.8-x86_64-apple-darwin.tar.gz"
-      sha256 "ce0e3aa68704356d5908b409495d8065ed7c3488d640e46f36c42ed9095f5b95"
+      url "https://github.com/aegoroff/solv/releases/download/v0.3.9/solv-v0.3.9-x86_64-apple-darwin.tar.gz"
+      sha256 "63822ba3d882cdf5369efd0bc1ee6f1514d256b87ed04d80af27bf50d8d47005"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/v0.3.8/solv-v0.3.8-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "5141939f5b3f397665e9cdcef2368c45769239a680cebf8e908212ed111966d1"
+      url "https://github.com/aegoroff/solv/releases/download/v0.3.9/solv-v0.3.9-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f272dd2aed5747a9122a81fb99f9da4b36fe73d9f196945d6821abdaac43c897"
     end
   end
 
   def install
-    bin.install "solv"
+    bin.install Dir["*"]
   end
 
 end
