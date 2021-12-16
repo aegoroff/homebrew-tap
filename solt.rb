@@ -5,21 +5,21 @@
 class Solt < Formula
   desc "Small console app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects"
   homepage "https://github.com/aegoroff/solt"
-  version "1.0.9"
+  version "1.0.10"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/solt/releases/download/v1.0.9/solt_1.0.9_darwin_arm64.tar.gz"
-      sha256 "14749e8122b0955e6fc25d8bd24c307355327db13f0ffb20a71485660c0ca3ad"
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.10/solt_1.0.10_darwin_amd64.tar.gz"
+      sha256 "38d3cfb820b3b4210696e5728f6085ae676b4e3979377c7579a9c31bc0e4e47b"
 
       def install
         bin.install "solt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solt/releases/download/v1.0.9/solt_1.0.9_darwin_amd64.tar.gz"
-      sha256 "619957cbe2549fecff4981a97bf557029f173ff1fed1d659fa60c33d309d9fd5"
+    if Hardware::CPU.arm?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.10/solt_1.0.10_darwin_arm64.tar.gz"
+      sha256 "a0b10368b6204f49a0daa24ff49081996e097396f6623c74c257437e35872b5d"
 
       def install
         bin.install "solt"
@@ -28,17 +28,17 @@ class Solt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solt/releases/download/v1.0.9/solt_1.0.9_linux_amd64.tar.gz"
-      sha256 "1a2ce848117e8a5cb4f097a3e868a1ebede4b6dd7800ae38c4d0aeb50a6f6d3f"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.10/solt_1.0.10_linux_armv7.tar.gz"
+      sha256 "92cffda440f717bdb67545ca9e9424c505cec1d77e0484f07372bbe558b83359"
 
       def install
         bin.install "solt"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/solt/releases/download/v1.0.9/solt_1.0.9_linux_armv7.tar.gz"
-      sha256 "8e5256abcc4b9a712dc03e010133721c00ddf56a98a8005edc6b2c0638c37762"
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/solt/releases/download/v1.0.10/solt_1.0.10_linux_amd64.tar.gz"
+      sha256 "faae91e270fe992df60f9f053b80e818eec77eba5c02504aa98c67df7f4a1237"
 
       def install
         bin.install "solt"
