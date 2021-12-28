@@ -9,15 +9,15 @@ class Solv < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/v0.5.2/solv-v0.5.2-x86_64-apple-darwin.tar.gz"
-      sha256 "0dd5dbf470169e3920ff91e0d1d5b67d81220011e70b070e8105ef97d7ea6d94"
+      url "https://github.com/aegoroff/solv/releases/download/v0.5.3/solv-v0.5.3-x86_64-apple-darwin.tar.gz"
+      sha256 "06df0c58a52fed059e7e35a1ded71cdc16c76b4466e980c1896099dccaca1374"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/v0.5.2/solv-v0.5.2-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "15ec3e22d3942063f625c7f23cd8d85faf8fc72aefc1e0d68015aaccc65c6687"
+      url "https://github.com/aegoroff/solv/releases/download/v0.5.3/solv-v0.5.3-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "06089c6b22488678f507bfe490b15ab95db4c7c3a4769861bf15268954727390"
     end
   end
 
