@@ -5,21 +5,21 @@
 class Fg < Formula
   desc "Small console app written in Go that allows you to easily group all files in the dir specified"
   homepage "https://github.com/aegoroff/fg"
-  version "0.2.6"
+  version "0.2.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/fg/releases/download/v0.2.6/fg_0.2.6_darwin_arm64.tar.gz"
-      sha256 "6f43f084bdd8490ddded76fd07f2233342b375277e7c4edfe6ed9208fae6a6f1"
+      url "https://github.com/aegoroff/fg/releases/download/v0.2.7/fg_0.2.7_darwin_arm64.tar.gz"
+      sha256 "257123458e23356f0b754dd3ccd2823ed83705798793440e5931d3db72597aa7"
 
       def install
         bin.install "fgr"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/fg/releases/download/v0.2.6/fg_0.2.6_darwin_amd64.tar.gz"
-      sha256 "3cca42d8a605fbc8a3f7280d737be9b2749a9c1e633f43d232ace7c95e0daa6f"
+      url "https://github.com/aegoroff/fg/releases/download/v0.2.7/fg_0.2.7_darwin_amd64.tar.gz"
+      sha256 "55eba12fb80ca7f03f0759ff296f739666ebd8bb223c8e4edfea9e4e5ab520f0"
 
       def install
         bin.install "fgr"
@@ -28,25 +28,25 @@ class Fg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/fg/releases/download/v0.2.6/fg_0.2.6_linux_armv7.tar.gz"
-      sha256 "1b94f23bbae7f98900028710f1f349620800b6201b8850be156c5c4ddecd1636"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aegoroff/fg/releases/download/v0.2.7/fg_0.2.7_linux_arm64.tar.gz"
+      sha256 "c3df8eedea400e371e8a58b577506d93c2e96fce80e2ab44305037b97d0f3c53"
 
       def install
         bin.install "fgr"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/fg/releases/download/v0.2.6/fg_0.2.6_linux_amd64.tar.gz"
-      sha256 "36dd53debd8ac2335b373ca8becf275a70a44af39d44d69faada1da0d5230431"
+      url "https://github.com/aegoroff/fg/releases/download/v0.2.7/fg_0.2.7_linux_amd64.tar.gz"
+      sha256 "ded49411e4454a5941002e2f72ac28ad77c08032010548fa4c2f44866a0c0aaa"
 
       def install
         bin.install "fgr"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/fg/releases/download/v0.2.6/fg_0.2.6_linux_arm64.tar.gz"
-      sha256 "fe89ccc7837bb2d5f86514b59cbcd5f1b6aa416d2a7372a5cb43c4aa865667ee"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/aegoroff/fg/releases/download/v0.2.7/fg_0.2.7_linux_armv7.tar.gz"
+      sha256 "79b690348dd114df6010008a2f8cdd657ac7abc09e01c809a824dcf14a49bd6b"
 
       def install
         bin.install "fgr"
