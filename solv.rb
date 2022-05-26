@@ -4,20 +4,20 @@
 class Solv < Formula
   desc "SOLution Validation tool that analyzes Microsoft Visual Studio solutions"
   homepage "https://github.com/aegoroff/solv"
-  version "0.5.6"
+  version "0.5.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/v0.5.6/solv-v0.5.6-x86_64-apple-darwin.tar.gz"
-      sha256 "37b6b109d1a11944efdbc64b7649d8757ff4cdf6e13fb86dfa3dcd0fca77937e"
+      url "https://github.com/aegoroff/solv/releases/download/v0.5.7/solv-v0.5.7-x86_64-apple-darwin.tar.gz"
+      sha256 "d45795e32885b14e4d4f5464c1c937c26d210b042574858fd0a311809bf73759"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/v0.5.6/solv-v0.5.6-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "51cf09afa4960d43adccc428e6e348585689c2fbb98499fd0a1cbd040bc9f48f"
+      url "https://github.com/aegoroff/solv/releases/download/v0.5.7/solv-v0.5.7-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "4e29c5df0debeae6a56fc979f27e79cf2e67031e103b066f2d1500815a937189"
     end
   end
 
