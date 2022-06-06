@@ -5,21 +5,21 @@
 class Solt < Formula
   desc "Small console app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects"
   homepage "https://github.com/aegoroff/solt"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.0/solt_1.1.0_darwin_arm64.tar.gz"
-      sha256 "798f3ccf85f2889969a76174fbdce5d9d2d688815ca4a6d8f5948ff6de57852a"
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_darwin_amd64.tar.gz"
+      sha256 "ebbc81ac0c8ea7b3a9af8084cdfec81c807012834e0552e156f7c3b7980c70bb"
 
       def install
         bin.install "solt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.0/solt_1.1.0_darwin_amd64.tar.gz"
-      sha256 "3c02f95bbe2ccc6c1d423f308733167ca9fd7d81a9d69508331c14e5045ab6ec"
+    if Hardware::CPU.arm?
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_darwin_arm64.tar.gz"
+      sha256 "e3bc2a5ec1c9586dab5f37a8d67a2596236933eff2117ec2a20286be3f53744e"
 
       def install
         bin.install "solt"
@@ -29,16 +29,16 @@ class Solt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.0/solt_1.1.0_linux_amd64.tar.gz"
-      sha256 "ea77cd3624b919188458a93e1abdc23f49f577c15c69790fcbd60f0cbaa97b1e"
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_linux_amd64.tar.gz"
+      sha256 "f298eb105272a76693a927b847af4e033495eb868158d3b8cda11da8a02f7f1f"
 
       def install
         bin.install "solt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.0/solt_1.1.0_linux_armv7.tar.gz"
-      sha256 "e6284f9bb20c2be2c4904445138df34411f8cba6b09c718b1ba9de1834a9facb"
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_linux_armv7.tar.gz"
+      sha256 "4d6981a50bcac3ae7d539cfd495601a2cc250ed214cf9b71d2dd1b621365deaf"
 
       def install
         bin.install "solt"
