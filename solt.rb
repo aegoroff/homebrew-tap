@@ -5,21 +5,21 @@
 class Solt < Formula
   desc "Small console app written in Go that allows you to easily analyze sources and Microsoft Visual Studio solutions and projects"
   homepage "https://github.com/aegoroff/solt"
-  version "1.1.1"
+  version "1.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_darwin_amd64.tar.gz"
-      sha256 "ebbc81ac0c8ea7b3a9af8084cdfec81c807012834e0552e156f7c3b7980c70bb"
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.2/solt_1.1.2_darwin_amd64.tar.gz"
+      sha256 "4bba9b30ccb75ad40d0c473bfe9a3c1e67aaafb878212afd7097aab2d6de8f7f"
 
       def install
         bin.install "solt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_darwin_arm64.tar.gz"
-      sha256 "e3bc2a5ec1c9586dab5f37a8d67a2596236933eff2117ec2a20286be3f53744e"
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.2/solt_1.1.2_darwin_arm64.tar.gz"
+      sha256 "9b24187e971c4937e562bb4be2152857da40936b75f71d96462146339d73c604"
 
       def install
         bin.install "solt"
@@ -29,16 +29,16 @@ class Solt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_linux_amd64.tar.gz"
-      sha256 "f298eb105272a76693a927b847af4e033495eb868158d3b8cda11da8a02f7f1f"
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.2/solt_1.1.2_linux_amd64.tar.gz"
+      sha256 "a198c37207f9090255f999832a14b37f4b64296dc238ab93571d9ca6df866634"
 
       def install
         bin.install "solt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/solt/releases/download/v1.1.1/solt_1.1.1_linux_armv7.tar.gz"
-      sha256 "4d6981a50bcac3ae7d539cfd495601a2cc250ed214cf9b71d2dd1b621365deaf"
+      url "https://github.com/aegoroff/solt/releases/download/v1.1.2/solt_1.1.2_linux_armv7.tar.gz"
+      sha256 "2767ad7f03af6925178f5c921bc498edc8e1292560d07bc77041efe3b4c08621"
 
       def install
         bin.install "solt"
