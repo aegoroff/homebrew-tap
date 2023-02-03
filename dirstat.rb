@@ -5,21 +5,21 @@
 class Dirstat < Formula
   desc "Small tool that shows selected folder or drive (on Windows) usage statistic"
   homepage "https://github.com/aegoroff/dirstat"
-  version "1.2.2"
+  version "1.2.3"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.2/dirstat_1.2.2_darwin_arm64.tar.gz"
-      sha256 "9dda62a54940776a01f120556046a97e9966e44969f1d5897dd72e42fd06a924"
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.3/dirstat_1.2.3_darwin_amd64.tar.gz"
+      sha256 "8b98033d8b840b362b1a9162da659e2bde17b9d6fe7f385217b5565119d3db8e"
 
       def install
         bin.install "dirstat"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.2/dirstat_1.2.2_darwin_amd64.tar.gz"
-      sha256 "31e7b9401973263682c32a6f1db3255e8b134dba2e9316ceaf3c9be329e0aefa"
+    if Hardware::CPU.arm?
+      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.3/dirstat_1.2.3_darwin_arm64.tar.gz"
+      sha256 "af25c8b12bdfe22f7217b057a3b62b2a2cda1c8e94fddf355b8569765c39cb27"
 
       def install
         bin.install "dirstat"
@@ -28,25 +28,25 @@ class Dirstat < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.3/dirstat_1.2.3_linux_amd64.tar.gz"
+      sha256 "66dde67d2f28142770d62e0de46fe4753289a09aab4c0301f0015ed3282af26e"
+
+      def install
+        bin.install "dirstat"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.2/dirstat_1.2.2_linux_armv7.tar.gz"
-      sha256 "d5ba210e2c3d36d8bbdab57da3f07b9abc31b658a99c660d8fde13532abe7903"
+      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.3/dirstat_1.2.3_linux_armv7.tar.gz"
+      sha256 "574785bc53ba3cd57566b967c71883b4b7d8314f233ad745c1561e94d22ac7b3"
 
       def install
         bin.install "dirstat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.2/dirstat_1.2.2_linux_arm64.tar.gz"
-      sha256 "8014bb40eec1c3d76b1e6e06002f1d01eb0fe99711a03d1e8d2d920c12e0e4b9"
-
-      def install
-        bin.install "dirstat"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.2/dirstat_1.2.2_linux_amd64.tar.gz"
-      sha256 "e23b537dca8831943ede0cfa946b70a1e77a19bd58491b2a367c064d4aa024d4"
+      url "https://github.com/aegoroff/dirstat/releases/download/v1.2.3/dirstat_1.2.3_linux_arm64.tar.gz"
+      sha256 "1c419ae11b0da7a4c513334fc9d77e64865482de3207de21373eea311d92c1bd"
 
       def install
         bin.install "dirstat"
