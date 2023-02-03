@@ -5,21 +5,21 @@
 class Copyto < Formula
   desc "Small console app written in Go that allows you to easily one way sync between folders"
   homepage "https://github.com/aegoroff/copyto"
-  version "1.2.8"
+  version "1.2.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.8/copyto_1.2.8_darwin_arm64.tar.gz"
-      sha256 "c4c0ecd2d1c6999d934f67ae6ee8b1d21557bdea27be39733f19dc8d4b83d0e0"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_darwin_arm64.tar.gz"
+      sha256 "7e0a9456ea387e1b528e64891d1abcb27f02a70a610ec6da672e734a08096bb4"
 
       def install
         bin.install "copyto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.8/copyto_1.2.8_darwin_amd64.tar.gz"
-      sha256 "4cd77546a413fa49b752cd9b75a51b3f1b52020893bf53ce61d9eff64557390a"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_darwin_amd64.tar.gz"
+      sha256 "40a4ef5c89c6b72ab552ac1499a8c5112b9df760d696690356b5ff91ae8dfd9e"
 
       def install
         bin.install "copyto"
@@ -29,16 +29,16 @@ class Copyto < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.8/copyto_1.2.8_linux_amd64.tar.gz"
-      sha256 "438d23d9258892c0858982748c317d5abec9f7a7e95a16b133bae4fb0beefde5"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_linux_amd64.tar.gz"
+      sha256 "61b6f695ee7c79149a13d13b4da446602a7495842a1bc3ae745eaf8de51e930f"
 
       def install
         bin.install "copyto"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.8/copyto_1.2.8_linux_armv7.tar.gz"
-      sha256 "89c40316390ab6e5ee32a3c11bf6d1bd60d43923dfefc1d4be53976be0650193"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_linux_armv7.tar.gz"
+      sha256 "8c88cf60c35b811ec6114e4f1d0a47b216338d6c268309f3bcbba87f1af91014"
 
       def install
         bin.install "copyto"
