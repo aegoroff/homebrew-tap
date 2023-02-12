@@ -4,20 +4,20 @@
 class Editorconfiger < Formula
   desc "Plain tool to validate and compare .editorconfig files"
   homepage "https://github.com/aegoroff/editorconfiger"
-  version "0.3.1"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/0.3.1/editorconfiger-0.3.1-x86_64-apple-darwin.tar.gz"
-      sha256 "1d6d41129015a4bbde424b65e58755ec1cd11af54b50d50d6ef468866ef26551"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/0.4.1/editorconfiger-0.4.1-x86_64-apple-darwin.tar.gz"
+      sha256 "30299a3e7f3f6b3c9d26e834ab9e28496a86272ddc7e170b7099339c4694aef2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/0.3.1/editorconfiger-0.3.1-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9bd3ab9ff9e3b2d3952f53e0bedcb782be2131a98b13980fba9769012e849006"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/0.4.1/editorconfiger-0.4.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "cff46889b3cbdbf1f361d065db674cc82919cf627fc1801afb5b22ddcc25fc76"
     end
   end
 
