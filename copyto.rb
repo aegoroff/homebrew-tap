@@ -5,21 +5,21 @@
 class Copyto < Formula
   desc "Small console app written in Go that allows you to easily one way sync between folders"
   homepage "https://github.com/aegoroff/copyto"
-  version "1.2.9"
+  version "1.2.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_darwin_arm64.tar.gz"
-      sha256 "7e0a9456ea387e1b528e64891d1abcb27f02a70a610ec6da672e734a08096bb4"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.10/copyto_1.2.10_darwin_arm64.tar.gz"
+      sha256 "4edc2fb8e2abd2a948d9dcf2c3822d9defb67ec50ed03d23b7df9db88727f03c"
 
       def install
         bin.install "copyto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_darwin_amd64.tar.gz"
-      sha256 "40a4ef5c89c6b72ab552ac1499a8c5112b9df760d696690356b5ff91ae8dfd9e"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.10/copyto_1.2.10_darwin_amd64.tar.gz"
+      sha256 "25c7b37fb0b35ba681dbde2dd3655e0a7cd8248d837c943f47fcad52e0bcd9ae"
 
       def install
         bin.install "copyto"
@@ -29,16 +29,16 @@ class Copyto < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_linux_amd64.tar.gz"
-      sha256 "61b6f695ee7c79149a13d13b4da446602a7495842a1bc3ae745eaf8de51e930f"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.10/copyto_1.2.10_linux_amd64.tar.gz"
+      sha256 "73a6392765036e707bad453b98c32bcba4797495cbcb69717d75c793201ddf4c"
 
       def install
         bin.install "copyto"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.2.9/copyto_1.2.9_linux_armv7.tar.gz"
-      sha256 "8c88cf60c35b811ec6114e4f1d0a47b216338d6c268309f3bcbba87f1af91014"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.2.10/copyto_1.2.10_linux_armv7.tar.gz"
+      sha256 "89000d8406b56cb752693aedd90689273c794d13a1e6aeccfd5cc63b0aa674a2"
 
       def install
         bin.install "copyto"
