@@ -9,19 +9,19 @@ class Solv < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/0.16.3/solv-0.16.3-x86_64-apple-darwin.tar.gz"
-      sha256 "13daee77b139ccd65e6b93f9eafb8d2549fc89175dae3ecdd3f3b02965c82047"
+      url "https://github.com/aegoroff/solv/releases/download/0.16.4/solv-0.16.4-x86_64-apple-darwin.tar.gz"
+      sha256 "d323a4622f58f9eef5434bc83115f2ff5094ff33e1b9249ce178c42146a52f9f"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/solv/releases/download/0.16.3/solv-0.16.3-aarch64-apple-darwin.tar.gz"
-      sha256 "86eda17758de76e710837a6d0adaca57c23af58aedb458ec2cc16210cc033f15"
+      url "https://github.com/aegoroff/solv/releases/download/0.16.4/solv-0.16.4-aarch64-apple-darwin.tar.gz"
+      sha256 "70d3330445592f4666003def27f4a3cf947ed895005c76763b9f7311243f08d8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/0.16.3/solv-0.16.3-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "bb879e14f0a0b2acef31f759edfc09b5ef9f1f8003343a9c617d6937232cf32b"
+      url "https://github.com/aegoroff/solv/releases/download/0.16.4/solv-0.16.4-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "a8bb64d9e394da223ee798fb8d787003a3289d38c62cbcb0c472c4a80bab1945"
     end
   end
 
