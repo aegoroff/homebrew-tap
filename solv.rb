@@ -4,24 +4,24 @@
 class Solv < Formula
   desc "SOLution Validation tool that analyzes Microsoft Visual Studio solutions"
   homepage "https://github.com/aegoroff/solv"
-  version "0.16.8"
+  version "0.16.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/0.16.8/solv-0.16.8-x86_64-apple-darwin.tar.gz"
-      sha256 "8709eb5a04087ddd42a4c9d208b276f76201b1fe3419ebd5f85bf0ea29fbb9f3"
+      url "https://github.com/aegoroff/solv/releases/download/0.16.9/solv-0.16.9-x86_64-apple-darwin.tar.gz"
+      sha256 "d06a5d87d095abe8870a6a28de1ae3e993ae31475c74266d4ffcaca5e5c4d761"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/solv/releases/download/0.16.8/solv-0.16.8-aarch64-apple-darwin.tar.gz"
-      sha256 "1729b339d834a619999bcbbe12b251328641e0d2b2eed1ddac4a2729101adc54"
+      url "https://github.com/aegoroff/solv/releases/download/0.16.9/solv-0.16.9-aarch64-apple-darwin.tar.gz"
+      sha256 "99d00cd1667ebb8ea14d28aae807fb6f84677dcab4655105638cc0e89ced81b6"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/solv/releases/download/0.16.8/solv-0.16.8-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "74c5651ff7ab9019e039d29463b67be966c98ea54ceac0f203ebc147a93772d6"
+      url "https://github.com/aegoroff/solv/releases/download/0.16.9/solv-0.16.9-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "7da3f0cd576eb4d15897bb487ecef562ef57ed7b5e42ed4638f99c962fe51106"
     end
   end
 
