@@ -4,20 +4,20 @@
 class Grok < Formula
   desc "Regular expressions macro engine. GROK is a tool like UNIX grep on steroids"
   homepage "https://github.com/aegoroff/grok"
-  version "0.3.2"
+  version "0.3.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/grok/releases/download/0.3.2/grok-0.3.2-x86_64-macos-none.tar.gz"
-      sha256 "0338ba3e892fa659dd9d8b75557bc18cbbae744105c2d46ec779cc3d8b799a2e"
+      url "https://github.com/aegoroff/grok/releases/download/0.3.3/grok-0.3.3-x86_64-macos-none.tar.gz"
+      sha256 "6422f0fc86920ba457308b76b473152f9eb4ee4907d46d9b5f448ec7ae90f369"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/grok/releases/download/0.3.2/grok-0.3.2-x86_64-linux-musl.tar.gz"
-      sha256 "b26f793af9df1f7fa47622e305f9fb413e177e5e251011111e474b647eee6a63"
+      url "https://github.com/aegoroff/grok/releases/download/0.3.3/grok-0.3.3-x86_64-linux-musl.tar.gz"
+      sha256 "fde79877c2d5a891853d45149c28a51e8f0b4e2164d8646fa46a068523b80c1f"
     end
   end
 
