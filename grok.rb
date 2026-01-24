@@ -10,14 +10,18 @@ class Grok < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/aegoroff/grok/releases/download/0.3.8/grok-0.3.8-x86_64-macos-none.tar.gz"
-      sha256 "0da2c36b8dbf8db0a45ecaeca83856c4563a0cec39b9abd9bfb4a4e0c3e00122"
+      sha256 "aa0423092f387482994eb200db72f33018d7d9d8a321003e0201b3e68d2b3031"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/aegoroff/grok/releases/download/0.3.8/grok-0.3.8-aarch64-macos-none.tar.gz"
+      sha256 "bbfc36f18440def2e336d4c0bae31392f03d84c2744b3029899832a77180bb66"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/aegoroff/grok/releases/download/0.3.8/grok-0.3.8-x86_64-linux-musl.tar.gz"
-      sha256 "74160b5ce85e75e98aaf94f930449746f420536e7e362840a4724663194dba81"
+      sha256 "7ec2de8341e2993533564d36d089ac78ccf425fbf86c95d868b7bab46b92e8dc"
     end
   end
 
