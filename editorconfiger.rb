@@ -4,24 +4,24 @@
 class Editorconfiger < Formula
   desc "Plain tool to validate and compare .editorconfig files"
   homepage ""
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/0.5.1/editorconfiger-0.5.1-x86_64-apple-darwin.tar.gz"
-      sha256 "80beda398544d82f2db837e82909d950cc71b7b13ff9e6d4f68013ac06666b04"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/0.5.2/editorconfiger-0.5.2-x86_64-apple-darwin.tar.gz"
+      sha256 "d018c58869d4aabac52e5f1858cc35f569055953dbad52c063518141d29c1b7d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/0.5.1/editorconfiger-0.5.1-aarch64-apple-darwin.tar.gz"
-      sha256 "6f12ee9c11d21ea7cbab5d434a3c874451e029671edec6ee2aafce0806993cd3"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/0.5.2/editorconfiger-0.5.2-aarch64-apple-darwin.tar.gz"
+      sha256 "ac40cfdf64612ea55c82f99ef5fbf4ec71ae36426a20433528e2380b286e3cfc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/editorconfiger/releases/download/0.5.1/editorconfiger-0.5.1-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "1f120f9cdaf687b06c89e8e69594b0aec3328dc04c8229cff5693e1dd74630f4"
+      url "https://github.com/aegoroff/editorconfiger/releases/download/0.5.2/editorconfiger-0.5.2-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "16f657da18eb7c51efbefeea91f3b5433ab6bd8f5f66cfb39b12ff72cadb80cd"
     end
   end
 
