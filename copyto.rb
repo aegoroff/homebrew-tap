@@ -5,21 +5,21 @@
 class Copyto < Formula
   desc "Small console app written in Go that allows you to easily one way sync between folders"
   homepage "https://github.com/aegoroff/copyto"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.3.0/copyto_1.3.0_darwin_amd64.tar.gz"
-      sha256 "77919281a2b86d73bdf82310cdaa3c76e8b544c07c5721e55f3642eaf6e2a9ba"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.3.1/copyto_1.3.1_darwin_amd64.tar.gz"
+      sha256 "b8b6279ac25f2172d7be8d153e23e9408afd045b6154f781efcd36c4d18d6ecd"
 
       def install
         bin.install "copyto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.3.0/copyto_1.3.0_darwin_arm64.tar.gz"
-      sha256 "c1ad86c3e4e324fc450649ec90d18d26e9ef547d3f4ba678a0ec29bdaf0d5769"
+      url "https://github.com/aegoroff/copyto/releases/download/v1.3.1/copyto_1.3.1_darwin_arm64.tar.gz"
+      sha256 "f3fc2d122efe578fdd51770686ed25dd7870af199ffb7ddcbca9afad4ec2f07f"
 
       def install
         bin.install "copyto"
@@ -28,26 +28,23 @@ class Copyto < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.3.0/copyto_1.3.0_linux_amd64.tar.gz"
-      sha256 "1be1fce42f4e522bbcd938484af310b85795f32a94b8f0d34267cf3b56eb0376"
-
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aegoroff/copyto/releases/download/v1.3.1/copyto_1.3.1_linux_amd64.tar.gz"
+      sha256 "0d1ef7c18ffc66e18cd5689920b4e3e78a68a7418c5d19de248cac30eedcb552"
       def install
         bin.install "copyto"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.3.0/copyto_1.3.0_linux_armv7.tar.gz"
-      sha256 "68ba85e7f1229c2537849ae8146c73959751136c89daf7859cfe7bbf340c3f23"
-
+      url "https://github.com/aegoroff/copyto/releases/download/v1.3.1/copyto_1.3.1_linux_armv7.tar.gz"
+      sha256 "e0072d7eb9d0da3973b01d4f95883cf4d841ed50c2d508dbdd828e990c93c058"
       def install
         bin.install "copyto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aegoroff/copyto/releases/download/v1.3.0/copyto_1.3.0_linux_arm64.tar.gz"
-      sha256 "dd50e562d560509be3f318791da20bd06d0d851b32b247089fe317a66e73eb4d"
-
+      url "https://github.com/aegoroff/copyto/releases/download/v1.3.1/copyto_1.3.1_linux_arm64.tar.gz"
+      sha256 "179765ddf527f942595e180a6c36224efd76ea00540ea715f3615dccbd11103c"
       def install
         bin.install "copyto"
       end
