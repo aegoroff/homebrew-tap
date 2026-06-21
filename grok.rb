@@ -4,24 +4,24 @@
 class Grok < Formula
   desc "Regular expressions macro engine. GROK is a tool like UNIX grep on steroids"
   homepage "https://github.com/aegoroff/grok"
-  version "0.4.4"
+  version "0.4.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/grok/releases/download/0.4.4/grok-0.4.4-x86_64-macos-none.tar.gz"
-      sha256 "de0f2c283cd18051247ebeba92b499eb2e0e831c92d55cb7c91e46fbe51d4ac9"
+      url "https://github.com/aegoroff/grok/releases/download/0.4.5/grok-0.4.5-x86_64-macos-none.tar.gz"
+      sha256 "a5e23475ddd829cf669ac5d8bc6cb82fefded9237159d01d9a5c8ca6cc5c7527"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/grok/releases/download/0.4.4/grok-0.4.4-aarch64-macos-none.tar.gz"
-      sha256 "4a5d4c044d9b4a944b6a0c81a3c79b06cec014e528fc7633abff410e7eb9896c"
+      url "https://github.com/aegoroff/grok/releases/download/0.4.5/grok-0.4.5-aarch64-macos-none.tar.gz"
+      sha256 "69083fe86188dda1d520276bee55139864adf46df313a0ec7d1205598e415839"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/grok/releases/download/0.4.4/grok-0.4.4-x86_64-linux-musl.tar.gz"
-      sha256 "2002d8f0acb2e8e67774c79ff1d5638f44b6c17de568516cffbb08b939cd9073"
+      url "https://github.com/aegoroff/grok/releases/download/0.4.5/grok-0.4.5-x86_64-linux-musl.tar.gz"
+      sha256 "cb6385c8859c90b7da2005361c20302e63b7e99d357eae455f6f398a3f6b1ab6"
     end
   end
 
