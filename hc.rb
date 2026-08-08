@@ -4,29 +4,29 @@
 class Hc < Formula
   desc "Hash Calculator is the console tool that can calculate about 50 cryptographic hashes of strings and files."
   homepage "https://github.com/aegoroff/hc"
-  version "6.0.0rc7"
+  version "6.0.0rc8"
   license "LGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/hc/releases/download/6.0.0rc7/hc-6.0.0rc7-x86_64-unknown-macos-none.tar.gz"
-      sha256 "97836dba046eb238738b075297d6ec16b7233f42b1aa7704d2d8a6bed780cfc0"
+      url "https://github.com/aegoroff/hc/releases/download/6.0.0rc8/hc-6.0.0rc8-x86_64-unknown-macos-none.tar.gz"
+      sha256 "a3d4ac7c0152a3461d471ab536f74cfc7bf4bd783b63c5eb6341c84eb08c4e53"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/hc/releases/download/6.0.0rc7/hc-6.0.0rc7-aarch64-unknown-macos-none.tar.gz"
-      sha256 "ee70a1a958552c6f184a52a1b8debb2f016af50f555a758d1987e9c79a3452b0"
+      url "https://github.com/aegoroff/hc/releases/download/6.0.0rc8/hc-6.0.0rc8-aarch64-unknown-macos-none.tar.gz"
+      sha256 "9c2ef76e7c19b086311a1e737dbb4f22985dda93a4964bb9bbc2110e31b3b669"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/hc/releases/download/6.0.0rc7/hc-6.0.0rc7-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "8e92815667856a6d10d3d2fa2585afcfc00d69924dbf64abd96cbf7d15f465fd"
+      url "https://github.com/aegoroff/hc/releases/download/6.0.0rc8/hc-6.0.0rc8-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "7e86a81ba05bcf1d7ca8b0ac9990671bce161f368bb991dfebb206096352ea4e"
     end
   end
 
   def install
-    bin.install "hc", "l2h"
+    bin.install Dir["*"].select { |f| File.file?(f) && File.executable?(f) }
   end
 
 end
