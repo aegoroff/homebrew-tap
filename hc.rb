@@ -26,7 +26,7 @@ class Hc < Formula
   end
 
   def install
-    bin.install Dir["*"]
+    bin.install "hc", "l2h"
   end
 
 end
