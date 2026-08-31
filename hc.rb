@@ -4,24 +4,24 @@
 class Hc < Formula
   desc "Hash Calculator is the console tool that can calculate about 70 cryptographic hashes of strings and files."
   homepage "https://github.com/aegoroff/hc"
-  version "6.1.0"
+  version "6.1.1"
   license "LGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/hc/releases/download/6.1.0/hc-6.1.0-x86_64-unknown-macos-none.tar.gz"
-      sha256 "d9d53508192c35e9d49796cb6d570e7e348d117732adbcde02a13dfeb958eac4"
+      url "https://github.com/aegoroff/hc/releases/download/6.1.1/hc-6.1.1-x86_64-unknown-macos-none.tar.gz"
+      sha256 "4b978ad7005a0492c197cef6da099628392eae1a49ff0e7fd792ca0b3e0fd3ee"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/aegoroff/hc/releases/download/6.1.0/hc-6.1.0-aarch64-unknown-macos-none.tar.gz"
-      sha256 "d451bb31bd33fc15e7d66175b6575bc14d519603ddeb5cd25ef39b479b867ba9"
+      url "https://github.com/aegoroff/hc/releases/download/6.1.1/hc-6.1.1-aarch64-unknown-macos-none.tar.gz"
+      sha256 "2ccd01150a8ae4fbe4e0727d64eb0767f9042bfd2d853381c7fc832d00394227"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/aegoroff/hc/releases/download/6.1.0/hc-6.1.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "4455e04b7581fae52996da35fbb158e5279575a8216df7d09af3a077c3e4eb6b"
+      url "https://github.com/aegoroff/hc/releases/download/6.1.1/hc-6.1.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "cf65329c01e1cb5281686bd484d1e1e67db29f53caaf0e288491ae93b0075c8c"
     end
   end
 
